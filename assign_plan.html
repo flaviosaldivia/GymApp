@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Plan de Entrenamiento - Gimnasio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">Volver</a>
+    </div>
+    <div class="form-page container">
+        <div class="form-section">
+            <h1>Asignar Plan de Entrenamiento</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="dni_socio_plan">DNI del Socio</label>
+                    <input type="text" id="dni_socio_plan" name="dni_socio_plan" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan_asignado">Plan Asignado</label>
+                    <select id="plan_asignado" name="plan_asignado" required>
+                        <option value="">Seleccione un plan</option>
+                        <option value="basico">Plan Básico</option>
+                        <option value="premium">Plan Premium</option>
+                        <option value="vip">Plan VIP</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_asignacion_plan">Fecha de Asignación</label>
+                    <input type="date" id="fecha_asignacion_plan" name="fecha_asignacion_plan" required>
+                </div>
+                <button type="submit" class="btn-accent">Asignar Plan</button>
+            </form>
+        </div>
+        <div class="image-section">
+            <img src="images/plan_form_img.jpg" alt="Imagen Plan de Entrenamiento">
+        </div>
+    </div>
+</body>
+</html>
+

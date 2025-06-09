@@ -1,0 +1,411 @@
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #6c757d; /* Gris oscuro */
+    --accent-color: #28a745; /* Verde para acciones */
+    --background-light: #f8f9fa; /* Fondo claro */
+    --text-color: #343a40; /* Texto oscuro */
+    --border-color: #dee2e6; /* Borde claro */
+    --card-bg: #ffffff; /* Fondo de tarjetas */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Un poco más oscuro */
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+}
+
+.btn-accent:hover {
+    background-color: #218838;
+}
+
+/* --- Page 1: Landing/Login Page --- */
+.landing-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Añadido padding para evitar que el contenido toque los bordes */
+    box-sizing: border-box; /* Incluye padding en el ancho/alto total */
+}
+
+.landing-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/gym_bg.jpg') no-repeat center center/cover;
+    filter: brightness(0.6); /* Oscurecer la imagen de fondo */
+    z-index: -1;
+}
+
+.landing-content {
+    z-index: 1;
+    max-width: 900px; /* Aumentado el ancho máximo */
+    padding: 40px; /* Aumentado el padding */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente más oscuro */
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--shadow-medium); /* Sombra más pronunciada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page .logo {
+    font-size: 4rem; /* Aumentado tamaño del logo */
+    font-weight: bold;
+    margin-bottom: 20px; /* Más espacio */
+    color: var(--primary-color); /* Color del logo */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+}
+
+.landing-page .tagline {
+    font-size: 2rem; /* Aumentado tamaño de tagline */
+    margin-bottom: 30px;
+}
+
+.landing-page h1 {
+    font-size: 3.5rem; /* Aumentado tamaño del título */
+    margin-bottom: 15px;
+    color: white; /* Título principal en blanco */
+}
+
+.landing-page p {
+    font-size: 1.3rem; /* Aumentado tamaño del subtítulo */
+    margin-bottom: 50px; /* Más espacio antes de los botones */
+    max-width: 700px;
+}
+
+.landing-page .top-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio antes de los botones de abajo */
+    flex-wrap: wrap;
+}
+
+.landing-page .top-actions button {
+    margin: 0 20px; /* Más espacio entre botones */
+    padding: 18px 45px; /* Botones más grandes */
+    font-size: 1.3rem; /* Fuente más grande */
+    border-radius: 8px;
+}
+
+.landing-page .bottom-actions {
+    margin-top: 40px; /* Espacio superior para los botones de abajo */
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan */
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+}
+
+.landing-page .bottom-actions button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    background-color: var(--secondary-color); /* Color diferente para destacar */
+}
+
+.landing-page .bottom-actions button:hover {
+    background-color: #5a6268;
+}
+
+
+/* --- Back Button (Common) --- */
+.back-button-container {
+    padding: 20px 40px;
+    text-align: left;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra ligera */
+}
+.back-button {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para que sea un botón de verdad */
+}
+.back-button:hover {
+    background-color: #5a6268;
+    text-decoration: none; /* Quitar el subrayado al pasar el ratón */
+}
+
+
+/* --- Page 2: Register Choice --- */
+.register-choice-page {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: var(--background-light);
+    padding: 10px;
+    object-fit: contain; /* Asegura que la imagen se ajuste bien */
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: var(--accent-color);
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+
+/* --- Form Pages (Common: Page 3, 4, 5, 6) --- */
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los ítems al inicio del contenedor flex */
+    padding: 40px 20px;
+    gap: 40px; /* Espacio entre el formulario y la imagen */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.form-section {
+    flex: 1; /* Permite que la sección del formulario crezca */
+    min-width: 350px; /* Ancho mínimo para el formulario */
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.form-section h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select {
+    width: calc(100% - 22px); /* Ancho completo menos padding y borde */
+    padding: 12px; /* Aumentado padding */
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Incluir padding y border en el width */
+}
+
+.form-section button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.image-section {
+    flex: 1; /* Permite que la sección de la imagen crezca */
+    min-width: 300px; /* Ancho mínimo para la imagen */
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .landing-page .landing-content {
+        max-width: 700px;
+    }
+    .landing-page .logo {
+        font-size: 3.5rem;
+    }
+    .landing-page .tagline {
+        font-size: 1.7rem;
+    }
+    .landing-page h1 {
+        font-size: 2.8rem;
+    }
+    .landing-page p {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .landing-page .landing-content {
+        padding: 30px;
+    }
+    .landing-page .logo {
+        font-size: 2.8rem;
+    }
+    .landing-page .tagline {
+        font-size: 1.4rem;
+    }
+    .landing-page h1 {
+        font-size: 2.2rem;
+    }
+    .landing-page p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .landing-page .top-actions button {
+        padding: 14px 35px;
+        font-size: 1.1rem;
+        margin: 10px; /* Ajuste para evitar desbordamiento */
+    }
+     .landing-page .bottom-actions {
+        flex-direction: column; /* Apila los botones de abajo */
+        align-items: center;
+        margin-top: 30px;
+        gap: 15px;
+    }
+    .landing-page .bottom-actions button {
+         width: 80%; /* Ocupa más ancho */
+         max-width: 300px; /* Ancho máximo para los botones apilados */
+    }
+
+    .form-page {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .form-section, .image-section {
+        width: 90%;
+        min-width: unset; /* Quitar ancho mínimo en móviles */
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-page .logo {
+        font-size: 2.2rem;
+    }
+    .landing-page h1 {
+        font-size: 1.8rem;
+    }
+    .landing-page .top-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+     .landing-page .top-actions button {
+         width: 80%;
+         max-width: 250px;
+    }
+    .card {
+        width: 90%;
+        padding: 25px;
+    }
+    .form-section {
+        padding: 20px;
+    }
+}
+

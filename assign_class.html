@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Clase de Entrenamiento - Gimnasio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">Volver</a>
+    </div>
+    <div class="form-page container">
+        <div class="form-section">
+            <h1>Asignar Clase de Entrenamiento</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="dni_socio_clase">DNI del Socio</label>
+                    <input type="text" id="dni_socio_clase" name="dni_socio_clase" required>
+                </div>
+                <div class="form-group">
+                    <label for="clase_asignada">Clase Asignada</label>
+                    <select id="clase_asignada" name="clase_asignada" required>
+                        <option value="">Seleccione una clase</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="spinning">Spinning</option>
+                        <option value="zumba">Zumba</option>
+                        <option value="crossfit">CrossFit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_asignacion_clase">Fecha</label>
+                    <input type="date" id="fecha_asignacion_clase" name="fecha_asignacion_clase" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora_asignacion_clase">Hora</label>
+                    <input type="time" id="hora_asignacion_clase" name="hora_asignacion_clase" required>
+                </div>
+                <button type="submit" class="btn-accent">Asignar Clase</button>
+            </form>
+        </div>
+        <div class="image-section">
+            <img src="images/class_form_img.jpg" alt="Imagen Clase de Entrenamiento">
+        </div>
+    </div>
+</body>
+</html>
+
